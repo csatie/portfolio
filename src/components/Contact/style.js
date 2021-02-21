@@ -35,21 +35,34 @@ export const Form = styled.form`
   }
 
   button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
     background: #000;
     color: #fff;
     font-weight: 200;
     letter-spacing: 0.25em;
     text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
   }
 `;
 
 export const FormInline = styled.div`
-  column-count: 2;
-  column-gap: 25px;
+  flex-direction: column;
   display: flex;
-  justify-content: space-between;
+
+  ${breakpointsMedia({
+    md: `
+      column-count: 2;
+      column-gap: 25px;
+      justify-content: space-between;
+      flex-direction: row;
+    `,
+  })};
 `;
 
 export const FormGroup = styled.div`

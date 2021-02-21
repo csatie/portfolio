@@ -47,6 +47,11 @@ TitleWrapper.Links = styled.nav`
 
   li {
     display: inline-flex;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
   }
 
   img {

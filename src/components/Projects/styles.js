@@ -56,6 +56,12 @@ ProjectDescription.Title = styled.h2`
     font-size: 26px;
     text-decoration: none;
     color: #000;
+    width: fit-content;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
   }
 
   img {

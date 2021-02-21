@@ -4,20 +4,31 @@ import loadingAnimation from './animations/coffee.json';
 
 const FooterWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  margin: 30px auto 10px;
+  margin: 0 auto 30px;
+`;
+
+const Background = styled.div`
+  background: #000;
+  border-radius: 50%;
 `;
 
 export default function Footer() {
   return (
     <FooterWrapper>
-      <Lottie
-        width="80px"
-        height="80px"
-        className="lottie-container basic"
-        config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
-      />
+      <Background>
+        <Lottie
+          width="60px"
+          height="60px"
+          className="lottie-container basic"
+          config={{
+            animationData: loadingAnimation,
+            loop: true,
+            autoplay: true,
+          }}
+        />
+      </Background>
     </FooterWrapper>
   );
 }

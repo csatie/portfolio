@@ -1,46 +1,59 @@
-const colors = {
+import { typographyVariants } from './typographyVariants';
+
+const lightTheme = {
   background: {
-    light: {
-      color: '#FFFFFF',
-    },
     main: {
-      color: '#F2F2F2',
+      color: '#FFF',
     },
   },
   borders: {
     main: {
-      color: '#F1F1F1',
+      color: '#000',
     },
   },
   primary: {
     main: {
-      color: '#D7385E',
+      color: '#000',
       contrastText: '#fff',
     },
   },
   secondary: {
     main: {
-      color: '#FB7B6B',
-      contrastText: '#fff',
+      color: '#FFF',
+      contrastText: '#000',
     },
   },
-  tertiary: {
+};
+
+const darkTheme = {
+  background: {
     main: {
-      color: '#070C0E',
-      contrastText: '#fff',
-    },
-    light: {
-      color: '#88989E',
-      contrastText: '#fff',
+      color: '#000',
     },
   },
-  modes: {
-    dark: {},
+  borders: {
+    main: {
+      color: '#FFF',
+    },
+  },
+  primary: {
+    main: {
+      color: '#FFF',
+      contrastText: '#000',
+    },
+  },
+  secondary: {
+    main: {
+      color: '#000',
+      contrastText: '#FFF',
+    },
   },
 };
 
 export default {
-  colors,
+  lightTheme,
+  darkTheme,
+  typographyVariants,
   breakpoints: {
     xs: 0, // extra small
     sm: 480, // small

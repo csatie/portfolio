@@ -72,9 +72,7 @@ ProjectDescription.Title = styled.h2`
 ProjectDescription.Subtitle = styled.h3`
   order: 0;
   font-size: 14px;
-  font-weight: 200;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+  ${(props) => props.theme.typographyVariants['fontWeight'][props.fontWeight]}
 `;
 
 ProjectDescription.Excerpt = styled.p`

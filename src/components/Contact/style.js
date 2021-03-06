@@ -26,29 +26,6 @@ export const Form = styled.form`
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
   }
-
-  label {
-    font-size: 14px;
-    font-weight: 200;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-  }
-
-  button {
-    padding: 15px 30px;
-    border: none;
-    background: #000;
-    color: #fff;
-    font-weight: 200;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
-  }
 `;
 
 export const FormInline = styled.div`
@@ -76,4 +53,25 @@ export const FormGroup = styled.div`
       display: inline-flex;
     `,
   })};
+`;
+
+export const Label = styled.label`
+  font-size: 14px;
+  ${(props) => props.theme.typographyVariants['fontWeight'][props.fontWeight]}
+`;
+
+export const Button = styled.label`
+  font-size: 14px;
+  padding: 15px 30px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  ${(props) => props.theme.typographyVariants['fontWeight'][props.fontWeight]}
 `;

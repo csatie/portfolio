@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
+// import { theme } from '../../theme';
 
 export const TopWrapper = styled.div`
   display: flex;
@@ -36,9 +37,7 @@ TitleWrapper.Name = styled.div`
 
   h2 {
     font-size: 20px;
-    font-weight: 200;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
+    ${(props) => props.theme.typographyVariants['fontWeight'][props.fontWeight]}
   }
 `;
 
@@ -62,16 +61,15 @@ TitleWrapper.Links = styled.nav`
 
 export const Bio = styled.p`
   font-size: 18px;
-  font-weight: 200;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
   margin: 30px auto 0;
   text-align: center;
+
+  ${(props) => props.theme.typographyVariants.fontWeight.light}
 
   ${breakpointsMedia({
     md: `
       margin: auto 0 auto 10%;
       text-align: left;
     `,
-  })};
+  })}
 `;

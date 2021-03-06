@@ -44,7 +44,7 @@ export default function Projects() {
                   {project.title} <img src="./images/link.svg" />
                 </a>
               </ProjectDescription.Title>
-              <ProjectDescription.Subtitle>
+              <ProjectDescription.Subtitle fontWeight="light">
                 {project.subtitle}
               </ProjectDescription.Subtitle>
               <ProjectDescription.Excerpt>

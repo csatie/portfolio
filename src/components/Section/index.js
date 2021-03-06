@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
 
-export const SectionWrapper = styled.div`
+export const SectionWrapper = styled.section`
   border-left: 1px solid;
   padding: 0 30px;
 
@@ -19,7 +19,7 @@ export const SectionTitle = styled.div`
   background: #fff;
   margin-left: -80px;
   margin-top: 40px;
-  padding-left: 10px;
+  padding: 0 10px;
   font-size: 14px;
   font-weight: 200;
   letter-spacing: 0.25em;
@@ -27,7 +27,7 @@ export const SectionTitle = styled.div`
 
   ${breakpointsMedia({
     md: `
-      margin-left: -110px;
+      margin-left: -115px;
     `,
   })}
 `;

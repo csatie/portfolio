@@ -1,4 +1,4 @@
-import { typographyVariants } from './typographyVariants';
+import { css } from 'styled-components';
 
 const lightTheme = {
   background: {
@@ -47,6 +47,16 @@ const darkTheme = {
       color: '#000',
       contrastText: '#FFF',
     },
+  },
+};
+
+const typographyVariants = {
+  fontWeight: {
+    light: css`
+      text-transform: uppercase;
+      font-weight: 200;
+      letter-spacing: 0.25em;
+    `,
   },
 };
 

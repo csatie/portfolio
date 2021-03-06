@@ -1,5 +1,5 @@
 import { SectionWrapper, SectionTitle } from '../Section';
-import { Form, FormInline, FormGroup } from './style';
+import { Form, FormInline, FormGroup, Label, Button } from './style';
 
 export default function Contact() {
   return (
@@ -9,19 +9,25 @@ export default function Contact() {
       <Form>
         <FormInline>
           <FormGroup>
-            <label for="name">Name:</label>
+            <Label htmlFor="name" fontWeight="light">
+              Name:
+            </Label>
             <input type="text" id="name" />
           </FormGroup>
           <FormGroup>
-            <label for="email">Email:</label>
+            <Label htmlFor="email" fontWeight="light">
+              Email:
+            </Label>
             <input type="mail" name="email" />
           </FormGroup>
         </FormInline>
 
-        <label for="message">Message:</label>
+        <Label htmlFor="message" fontWeight="light">
+          Message:
+        </Label>
         <textarea rows="7" id="message"></textarea>
 
-        <button>Send</button>
+        <Button fontWeight="light">Send</Button>
       </Form>
     </SectionWrapper>
   );

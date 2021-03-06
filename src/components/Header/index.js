@@ -27,7 +27,7 @@ export default function Header() {
           <br />
           Developer
         </TitleWrapper.Position>
-        <TitleWrapper.Name>
+        <TitleWrapper.Name fontWeight="light">
           <h2>Camila Satie</h2>
           <TitleWrapper.Links>
             {links.map(function (link) {
@@ -42,7 +42,7 @@ export default function Header() {
           </TitleWrapper.Links>
         </TitleWrapper.Name>
       </TitleWrapper>
-      <Bio>
+      <Bio fontWeight="light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
         consectetur arcu quis metus tempus, a ullamcorper ante pellentesque.
       </Bio>

@@ -43,19 +43,30 @@ TitleWrapper.Name = styled.div`
 
 TitleWrapper.Links = styled.nav`
   list-style: none;
+  display: inline-flex;
 
   li {
-    display: inline-flex;
-
     &:hover,
     &:focus {
       opacity: 0.8;
     }
   }
 
-  img {
-    max-height: 30px;
+  a {
+    background: #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 5px;
+  }
+
+  img {
+    max-height: 20px;
+    max-width: 20px;
+    /* margin-left: 5px; */
   }
 `;
 

@@ -1,5 +1,5 @@
 import { SectionWrapper, SectionTitle } from '../Section';
-import { Form, FormInline, FormGroup, Label, Button } from './style';
+import { Form, FormInline, FormGroup, Label, Button } from './styles';
 
 export default function Contact() {
   return (

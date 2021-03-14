@@ -32,7 +32,7 @@ export default function Header() {
           <TitleWrapper.Links>
             {links.map(function (link) {
               return (
-                <li key={link.url}>
+                <li key={link.title}>
                   <a href={link.url}>
                     <img src={link.img} />
                   </a>

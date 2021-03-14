@@ -1,5 +1,6 @@
 import { ProjectWrapper, ProjectImage, ProjectDescription } from './styles';
 import { SectionWrapper, SectionTitle } from '../Section';
+import Modal from '../Modal';
 
 const projectsList = [
   {
@@ -9,6 +10,7 @@ const projectsList = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur arcu quis metus tempus, a ullamcorper ante pellentesque.',
     img: './images/placeholder.svg',
     url: '/',
+    modal: 'project 1',
   },
   {
     title: 'Project 2',
@@ -17,6 +19,7 @@ const projectsList = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur arcu quis metus tempus, a ullamcorper ante pellentesque.',
     img: './images/placeholder.svg',
     url: '/',
+    modal: 'project 2',
   },
   {
     title: 'Project 3',
@@ -25,17 +28,30 @@ const projectsList = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur arcu quis metus tempus, a ullamcorper ante pellentesque.',
     img: './images/placeholder.svg',
     url: '/',
+    modal: 'project 3',
   },
 ];
 
 export default function Projects() {
+  const [isModalOpen, setModalState] = React.useState(false);
+  const [modalContent, setModalContent] = React.useState('');
+
+  function handleModalContent(index) {
+    setModalContent(projectsList[index].modal);
+    setModalState(true);
+  }
+
   return (
     <SectionWrapper>
       <SectionTitle>Projects</SectionTitle>
-      {projectsList.map(function (project) {
+      {projectsList.map(function (project, index) {
         return (
-          <ProjectWrapper>
-            <ProjectImage>
+          <ProjectWrapper key={index}>
+            <ProjectImage
+              onClick={() => {
+                handleModalContent(index);
+              }}
+            >
               <img src={project.img} />
             </ProjectImage>
             <ProjectDescription>
@@ -54,6 +70,12 @@ export default function Projects() {
           </ProjectWrapper>
         );
       })}
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setModalState(false)}
+        content={modalContent}
+      />
     </SectionWrapper>
   );
 }

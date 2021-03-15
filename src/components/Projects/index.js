@@ -71,11 +71,9 @@ export default function Projects() {
         );
       })}
 
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setModalState(false)}
-        content={modalContent}
-      />
+      <Modal isOpen={isModalOpen} onClose={() => setModalState(false)}>
+        {modalContent}
+      </Modal>
     </SectionWrapper>
   );
 }
